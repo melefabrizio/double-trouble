@@ -68,12 +68,41 @@ is.
 
 ### Known limits
 
+> [!WARNING]
+> **After Claude updates itself, the environment's window may show your main
+> Claude profile instead.**
+>
+> Claude installs updates into the copy it is running from, then restarts it.
+> The restart does not pass the profile folder, so the copy opens on Claude's
+> **main profile** (`~/Library/Application Support/Claude`), still wearing the
+> environment's icon. Your environment's data is not touched: profiles live in
+> `~/.claude-instances` and updates only replace the app.
+>
+> What to watch for:
+>
+> - The window looks like your environment but shows another account, or no
+>   account. Do not work in it: quit it with ⌘Q and click the environment's
+>   launcher again. It opens on the right profile, already updated.
+> - If Claude's main profile is **also** open at the same time (for example
+>   from the regular Claude icon), two Claude processes are now using that one
+>   profile. Claude does not prevent this; the second one can show up signed
+>   out, and running two processes on one profile risks damaging it. Quit the
+>   extra window with ⌘Q right away.
+>
+> If Double Trouble is open when this happens, it closes the restarted copy and
+> reopens it on its own profile within a few seconds. It only does so for a
+> copy started less than a minute earlier, so it never closes a window you are
+> using. With Double Trouble closed, nothing fixes it for you.
+>
+> The safest setup: give every account its own environment, keep Claude's main
+> profile unused, and keep Double Trouble open while you use Claude.
+>
+> This behavior comes from how Claude's updater restarts the app; it has not
+> been observed step by step on every Claude version.
+
 - A launcher you keep in the Dock and the running app are two separate icons
   (with the same look). The Dock merges them only when they are the same app,
   and the copy cannot pick its profile when started from the Dock.
-- When Claude updates itself inside a copy, it restarts that copy without its
-  profile. If Double Trouble is open, it puts it back on the right profile
-  within a few seconds.
 - Every copy is the same app to macOS, so `claude://` links (such as the
   browser sign-in) reach one instance only. Sign in to one environment at a
   time.
