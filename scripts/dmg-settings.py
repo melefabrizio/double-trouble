@@ -1,5 +1,5 @@
 # dmgbuild settings for the release disk image. Paths come in as -D defines
-# from scripts/make-dmg.sh. Icon positions match Design/dmg-background.tiff.
+# from scripts/make-dmg.sh. Icon positions match Design/dmg-background.png.
 app = defines["app"]
 app_name = app.rstrip("/").split("/")[-1]
 

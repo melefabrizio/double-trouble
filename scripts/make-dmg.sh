@@ -28,9 +28,10 @@ fi
 
 echo "▸ Immagine disco $DMG"
 rm -f "$DMG"
-"$VENV/bin/dmgbuild" -s scripts/dmg-settings.py \
+# --no-hidpi: a 2x background breaks the layout in macOS 26 Finder.
+"$VENV/bin/dmgbuild" --no-hidpi -s scripts/dmg-settings.py \
     -D app="$APP" \
-    -D background=Design/dmg-background.tiff \
+    -D background=Design/dmg-background.png \
     -D volume_icon=Design/AppIcon.icns \
     "$APP_NAME" "$DMG" >/dev/null
 hdiutil verify "$DMG" >/dev/null

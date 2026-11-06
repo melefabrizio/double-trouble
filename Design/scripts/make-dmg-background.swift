@@ -1,4 +1,6 @@
-// Draws the disk image window background: Design/dmg-background.tiff (1x + 2x).
+// Draws the disk image window background: Design/dmg-background.png, 640×400 at 1x.
+// Only 1x on purpose: on macOS 26 Finder draws the 2x image of a HiDPI TIFF (or a
+// 144 dpi PNG) at twice the window size, so the layout breaks.
 // Layout must match scripts/dmg-settings.py: 640×400 window, icons centered at
 // (170, 190) and (470, 190). Run: swift Design/scripts/make-dmg-background.swift
 import AppKit
@@ -59,13 +61,6 @@ func render(scale: Double) -> NSBitmapImageRep {
 }
 
 let dir = URL(fileURLWithPath: CommandLine.arguments[0]).deletingLastPathComponent().deletingLastPathComponent()
-let tmp = FileManager.default.temporaryDirectory
-let one = tmp.appendingPathComponent("dmg-bg.png"), two = tmp.appendingPathComponent("dmg-bg@2x.png")
-try! render(scale: 1).representation(using: .png, properties: [:])!.write(to: one)
-try! render(scale: 2).representation(using: .png, properties: [:])!.write(to: two)
-let out = dir.appendingPathComponent("dmg-background.tiff")
-let p = Process()
-p.executableURL = URL(fileURLWithPath: "/usr/bin/tiffutil")
-p.arguments = ["-cathidpicheck", one.path, two.path, "-out", out.path]
-try! p.run(); p.waitUntilExit()
-print(p.terminationStatus == 0 ? "✅ \(out.path)" : "tiffutil failed")
+let out = dir.appendingPathComponent("dmg-background.png")
+try! render(scale: 1).representation(using: .png, properties: [:])!.write(to: out)
+print("✅ \(out.path)")
