@@ -1,0 +1,174 @@
+/* English. Keys are the Italian source strings (see scripts/extract-strings.py). */
+
+/* Menu bar & toolbar */
+"Nuovo ambiente Claude Desktop…" = "New Claude Desktop Environment…";
+"Nuovo ambiente Claude Code…" = "New Claude Code Environment…";
+"Ambiente Claude Desktop…" = "Claude Desktop Environment…";
+"Ambiente Claude Code…" = "Claude Code Environment…";
+"Nuovo ambiente" = "New Environment";
+"Nuovo ambiente (⌘N)" = "New Environment (⌘N)";
+
+/* Sidebar & empty states */
+"Claude Desktop" = "Claude Desktop";
+"Claude Code" = "Claude Code";
+"In esecuzione" = "Running";
+"Non in esecuzione" = "Not running";
+"Senza comando" = "No command";
+"Un alias di shell usa questo profilo" = "A shell alias uses this profile";
+"Apri" = "Open";
+"Mostra nel Finder" = "Show in Finder";
+"Claude non è installato" = "Claude Is Not Installed";
+"Installa Claude Desktop o Claude Code." = "Install Claude Desktop or Claude Code.";
+"Scarica Claude" = "Download Claude";
+"Nessun ambiente" = "No Environments";
+"Un ambiente è Claude con un account separato." = "An environment is Claude with a separate account.";
+
+/* Shared labels */
+"Nome" = "Name";
+"Lavoro" = "Work";
+"lavoro" = "work";
+"Identificativo" = "Identifier";
+"Profilo" = "Profile";
+"Cartella" = "Folder";
+"Mostra" = "Show";
+"Spazio occupato" = "Size";
+"Verrà creato al primo avvio" = "Created on first launch";
+"Account" = "Account";
+"Email" = "Email";
+"Organizzazione" = "Organization";
+"Stato" = "Status";
+"Annulla" = "Cancel";
+"Salva" = "Save";
+"Crea" = "Create";
+"Elimina" = "Move to Trash";
+"Aspetto" = "Appearance";
+"Colore" = "Color";
+"Tonalità" = "Hue";
+"Saturazione" = "Saturation";
+"%lld°" = "%lld°";
+"%lld%%" = "%lld%%";
+"%@ (%@)" = "%@ (%@)";
+"Claude %@" = "Claude %@";
+"Claude …" = "Claude …";
+
+/* Colors */
+"Arancio" = "Orange";
+"Rosso" = "Red";
+"Giallo" = "Yellow";
+"Verde" = "Green";
+"Azzurro" = "Light Blue";
+"Blu" = "Blue";
+"Viola" = "Purple";
+"Rosa" = "Pink";
+"Grafite" = "Graphite";
+
+/* Desktop environment detail */
+"Salva per aggiornare l'icona" = "Save to update the icon";
+"L'app verrà rinominata in \"Claude %@.app\"." = "The app will be renamed to “Claude %@.app”.";
+"Salva modifiche" = "Save Changes";
+"Installazione" = "Installation";
+"Posizione" = "Location";
+"Applicazioni" = "Applications";
+"Installa in Applicazioni" = "Install in Applications";
+"Oppure trascina l'icona." = "Or drag the icon.";
+"Libera spazio" = "Free Up Space";
+"Svuota la cache" = "Clear Cache";
+"Rimuovi la macchina virtuale di Cowork (vm_bundles)" = "Remove the Cowork Virtual Machine (vm_bundles)";
+"Cache e macchina virtuale si riscaricano da sole quando servono" = "The cache and virtual machine download again when needed";
+"Elimina profilo…" = "Delete Profile…";
+"Elimina ambiente…" = "Delete Environment…";
+"Eliminare \"Claude %@\"?" = "Delete “Claude %@”?";
+"Eliminare il profilo \"%@\"?" = "Delete the profile “%@”?";
+"Eliminare \"%@\"?" = "Delete “%@”?";
+"l'app \"Claude %@\"" = "the app “Claude %@”";
+"il comando %@" = "the command %@";
+
+/* New Desktop environment */
+"Copia il profilo di Claude" = "Copy Claude’s profile";
+"Il nome non può contenere \"/\" o \":\"." = "The name can’t contain “/” or “:”.";
+"Esiste già un'app chiamata \"%@\"." = "An app named “%@” already exists.";
+"Nome della cartella del profilo: ~/.claude-instances/%@. Non si può cambiare dopo." = "Profile folder name: ~/.claude-instances/%@. It can’t be changed later.";
+"Serve un identificativo: lettere minuscole, numeri e trattini." = "An identifier is required: lowercase letters, numbers and hyphens.";
+"Usa solo lettere minuscole, numeri, - e _." = "Use only lowercase letters, numbers, - and _.";
+"\"default\" è il profilo di Claude stesso: scegli un altro nome." = "“default” is Claude’s own profile: choose another name.";
+"Esiste già un profilo con questo identificativo." = "A profile with this identifier already exists.";
+
+/* Delete sheet */
+"Nel Cestino va solo %@. Il profilo resta." = "Only %@ is moved to the Trash. The profile stays.";
+"Elimina anche il profilo" = "Also delete the profile";
+"Dimensione" = "Size";
+"Per confermare, scrivi **%@**:" = "To confirm, type **%@**:";
+"Elimina profilo" = "Delete Profile";
+
+/* Claude Code */
+"Copia" = "Copy";
+"Copiato" = "Copied";
+"Alias" = "Alias";
+"alias %@" = "alias %@";
+"alias in %@" = "alias in %@";
+"Nella shell l'alias prevale sul comando." = "In the shell, the alias takes precedence over the command.";
+"Disattiva alias…" = "Disable Alias…";
+"Disattiva alias" = "Disable Alias";
+"Disattivare l'alias?" = "Disable the alias?";
+"Comando" = "Command";
+"Sostituisce" = "Replaces";
+"Crea comando" = "Create Command";
+"Crea comando e disattiva alias" = "Create Command and Disable Alias";
+"Creare il comando e disattivare l'alias?" = "Create the command and disable the alias?";
+"La riga viene commentata e il file originale resta come backup.\n%@\n\nVale dal prossimo terminale aperto." = "The line is commented out and the original file is kept as a backup.\n%@\n\nTakes effect in new terminal windows.";
+"Il comando resta %@." = "The command stays %@.";
+"Non collegato" = "Not signed in";
+"Script" = "Script";
+"Copia la configurazione da" = "Copy configuration from";
+"Nessuno" = "None";
+"Lettere minuscole, numeri e trattini. Non si può cambiare dopo." = "Lowercase letters, numbers and hyphens. It can’t be changed later.";
+"Questo nome è riservato." = "This name is reserved.";
+"Esiste già una cartella o un comando con questo nome." = "A folder or command with this name already exists.";
+
+/* Errors */
+"Claude non è installato in /Applications. Scaricalo da claude.ai/download." = "Claude isn’t installed in /Applications. Download it from claude.ai/download.";
+"Esiste già un'app con questo nome: %@" = "An app with this name already exists: %@";
+"Il nome non può essere vuoto né contenere \"/\" o \":\"." = "The name can’t be empty or contain “/” or “:”.";
+"Esiste già un comando con questo nome: %@" = "A command with this name already exists: %@";
+"%@ non è riuscito (codice %d)" = "%@ failed (code %d)";
+"Esci da Claude prima di eliminare l'ambiente." = "Quit Claude before deleting the environment.";
+"Esci da Claude per liberare spazio" = "Quit Claude to free up space";
+"Senza app" = "No app";
+"Crea app…" = "Create App…";
+"Nessuna app" = "No app";
+"Non installato" = "Not installed";
+"Impossibile creare l'ambiente" = "Couldn’t create the environment";
+"Impossibile creare il comando" = "Couldn’t create the command";
+"Impossibile rinominare" = "Couldn’t rename";
+"Impossibile disattivare l'alias" = "Couldn’t disable the alias";
+"Impossibile eliminare l'ambiente" = "Couldn’t delete the environment";
+"Impossibile salvare le modifiche" = "Couldn’t save the changes";
+"Impossibile installare in Applicazioni" = "Couldn’t install in Applications";
+"Impossibile aprire Claude" = "Couldn’t open Claude";
+"Impossibile liberare spazio" = "Couldn’t free up space";
+"Copia del profilo…" = "Copying profile…";
+"Creazione dell'app…" = "Creating app…";
+"%@ non è stato creato da Double Trouble e non verrà modificato." = "%@ wasn’t created by Double Trouble and won’t be changed.";
+"Uscita forzata…" = "Force Quit…";
+"Uscire forzatamente da %@?" = "Force quit %@?";
+"Uscita forzata" = "Force Quit";
+"Il processo viene terminato e le risposte in corso si perdono. Per uscire normalmente usa ⌘Q in Claude." = "The process is terminated and any responses in progress are lost. To quit normally, press ⌘Q in Claude.";
+"Esci da Claude (⌘Q) prima di creare l'ambiente." = "Quit Claude (⌘Q) before creating the environment.";
+"Non collegato. Avvia %@ ed esegui /login." = "Not signed in. Run %@, then /login.";
+"Copia login, impostazioni e server MCP, senza cache e VM." = "Copies login, settings and MCP servers, without cache or VM.";
+"Il profilo contiene ancora account e chat." = "The profile still has its account and chats.";
+"Il profilo resta dov'è, non serve rifare il login." = "The profile stays where it is, no need to sign in again.";
+"Login, cronologia e impostazioni di questo ambiente vanno nel Cestino. Finché non svuoti il Cestino puoi recuperarli a mano." = "This environment’s login, history and settings are moved to the Trash. Until you empty the Trash, you can restore them by hand.";
+"Trascina nel Dock o nella cartella Applicazioni" = "Drag to the Dock or the Applications folder";
+"Trascina nel Dock" = "Drag to the Dock";
+"settings.json, CLAUDE.md, agent, comandi e skill." = "settings.json, CLAUDE.md, agents, commands and skills.";
+"~/Applicazioni" = "~/Applications";
+"Elimina app e profilo" = "Delete App and Profile";
+"Elimina comando e profilo" = "Delete Command and Profile";
+"Configurazione" = "Setup";
+"Copia comando" = "Copy Command";
+"Badge" = "Badge";
+"Facoltativo" = "Optional";
+"Fino a 3 lettere o numeri. Nelle icone piccole resta solo il pallino." = "Up to 3 letters or digits. Small icon sizes show only the dot.";
+"Testo del badge" = "Badge Text";
+"Nero" = "Black";

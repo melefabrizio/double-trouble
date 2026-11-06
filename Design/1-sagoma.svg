@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Livello 1 · sagoma (Mitosi A). Chiaro #2B2A27 · Scuro #EDE7DC -->
+  <g transform="translate(512 512) rotate(-45)">
+    <path d="M 143.5 -65.5 A 190 190 0 1 0 -143.5 -65.5 A 100 100 0 0 1 -143.5 65.5 A 190 190 0 1 0 143.5 65.5 A 100 100 0 0 1 143.5 -65.5 Z" fill="#2B2A27"/>
+  </g>
+</svg>
