@@ -108,7 +108,7 @@ The Xcode Command Line Tools are enough.
 ```bash
 ./scripts/build-app.sh          # checks + dist/Double Trouble.app + .zip
 ./scripts/build-app.sh --open   # same, then launches it
-./scripts/make-dmg.sh           # builds, then dist/Double-Trouble-<version>.dmg
+./scripts/make-dmg.sh           # builds, then dist/Double-Trouble-<version>.dmg (needs Python 3.10+)
 swift run CoreChecks            # core checks only
 ```
 
