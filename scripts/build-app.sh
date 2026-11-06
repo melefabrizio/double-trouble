@@ -45,6 +45,7 @@ cat > "$APP/Contents/Info.plist" <<EOF
     <key>CFBundlePackageType</key><string>APPL</string>
     <key>CFBundleShortVersionString</key><string>$VERSION</string>
     <key>CFBundleVersion</key><string>1</string>
+    <key>NSHumanReadableCopyright</key><string>© 2026 Fabrizio Mele. MIT License.</string>
     <key>CFBundleDevelopmentRegion</key><string>en</string>
     <key>CFBundleLocalizations</key><array><string>en</string><string>it</string></array>
     <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
