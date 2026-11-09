@@ -145,7 +145,7 @@ The app is in English and Italian. The icon sources are in `Design/`.
 
 ## Credits
 
-Double Trouble was inspired by two gists:
+Double Trouble was inspired by:
 
 - [Multiple Claude Desktop instances on macOS](https://gist.github.com/aoxborrow/5a3a0ac0aa37819cc19439b70a552221)
   by aoxborrow, which introduced color-coded launchers and the focus-or-launch
@@ -155,8 +155,6 @@ Double Trouble was inspired by two gists:
   ([gist](https://gist.github.com/stracker-phil/9f84927a556632c7f9cc06663b534f14)),
   which both build on.
 
-No code from either gist is included: the launcher script and the icon
-recoloring were written from scratch for this app.
 
 ## License
 
