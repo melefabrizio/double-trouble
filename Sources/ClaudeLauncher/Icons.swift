@@ -67,14 +67,53 @@ final class IconFileCache {
 }
 
 /// Lets an app bundle be dragged out of the window into the Dock, Finder or Applications.
+///
+/// AppKit, not SwiftUI's `onDrag`: SwiftUI hands the drop target a copy of the
+/// bundle in `~/Library/Caches/com.apple.SwiftUI.Drag-…`, so the Dock pinned
+/// that copy and showed a question mark once macOS cleared the cache. A
+/// dragging session with the file URL hands over the launcher itself.
 struct DraggableApp: ViewModifier {
     let url: URL?
 
     func body(content: Content) -> some View {
-        if let url {
-            content.onDrag { NSItemProvider(object: url as NSURL) }
-        } else {
-            content
+        content.overlay { if let url { FileDragSource(url: url) } }
+    }
+}
+
+private struct FileDragSource: NSViewRepresentable {
+    let url: URL
+
+    func makeNSView(context: Context) -> SourceView { SourceView(url: url) }
+    func updateNSView(_ view: SourceView, context: Context) { view.url = url }
+
+    final class SourceView: NSView, NSDraggingSource {
+        var url: URL
+        private var mouseDownEvent: NSEvent?
+
+        init(url: URL) {
+            self.url = url
+            super.init(frame: .zero)
+        }
+
+        required init?(coder: NSCoder) { fatalError("not used") }
+
+        override func acceptsFirstMouse(for event: NSEvent?) -> Bool { true }
+        override func mouseDown(with event: NSEvent) { mouseDownEvent = event }
+
+        override func mouseDragged(with event: NSEvent) {
+            guard let start = mouseDownEvent else { return }
+            let a = start.locationInWindow, b = event.locationInWindow
+            guard hypot(b.x - a.x, b.y - a.y) > 3 else { return }
+            mouseDownEvent = nil
+            let item = NSDraggingItem(pasteboardWriter: url as NSURL)
+            let icon = NSWorkspace.shared.icon(forFile: url.path)
+            item.setDraggingFrame(bounds, contents: icon)
+            beginDraggingSession(with: [item], event: start, source: self)
+        }
+
+        func draggingSession(_ session: NSDraggingSession,
+                             sourceOperationMaskFor context: NSDraggingContext) -> NSDragOperation {
+            context == .outsideApplication ? [.copy, .link, .generic] : []
         }
     }
 }

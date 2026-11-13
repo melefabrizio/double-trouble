@@ -183,7 +183,6 @@ struct SidebarRow: View {
             }
         }
         .padding(.vertical, 2)
-        .draggableApp(record.primary?.url)
         .contextMenu {
             Button("Apri") { store.launch(record) }
             if let url = record.primary?.url {
